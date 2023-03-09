@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+vehiculo_user,Vehiculo usuario,model_taller_vehiculo,taller_user,1,0,0,0
+marca_user,Marca usuario,model_taller_marca,taller_user,1,0,0,0
+vehiculo_manager,Vehiculo responsable,model_taller_vehiculo,taller_manager,1,1,1,1
+marca_manager,Marca responsable,model_taller_marca,taller_manager,1,1,1,1

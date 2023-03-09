@@ -1,0 +1,9 @@
+<odoo>
+    <record id="taller_user" model="res.groups">
+        <field name="name">Taller / Mecánico</field>
+    </record>
+
+    <record id="taller_manager" model="res.groups">
+        <field name="name">Taller / Responsable</field>
+    </record>
+</odoo>

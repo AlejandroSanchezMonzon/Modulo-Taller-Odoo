@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <record id="taller.view_vehiculo_list" model="ir.ui.view">
+            <field name="name">taller.vehiculo.tree</field>
+            <field name="model">taller.vehiculo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="marca_id"/>
+                    <field name="modelo"/>
+                    <field name="tipo"/>
+                    <field name="matriculacion"/>
+                    <field name="valor_nuevo"/>
+                    <field name="valor_actual_estimado"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="taller.view_marca_list" model="ir.ui.view">
+            <field name="name">taller.marca.tree</field>
+            <field name="model">taller.marca</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="vehiculos"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="taller.view_vehiculo_form" model="ir.ui.view">
+            <field name="name">taller.vehiculo.form</field>
+            <field name="model">taller.vehiculo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col="2">
+                        <field name="nombre"/>
+                        <field name="marca_id"/>
+                        <field name="modelo"/>
+                        <field name="tipo"/>
+                        <field name="matriculacion"/>
+                        <field name="valor_nuevo"/>
+                        <field name="valor_actual_estimado"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="taller.view_marca_form" model="ir.ui.view">
+            <field name="name">taller.marca.form</field>
+            <field name="model">taller.marca</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col="2">
+                        <field name="nombre"/>
+                        <field name="vehiculos">
+                            <tree>
+                                <field name="nombre"/>
+                                <field name="marca_id"/>
+                                <field name="modelo"/>
+                                <field name="tipo"/>
+                                <field name="matriculacion"/>
+                                <field name="valor_nuevo"/>
+                                <field name="valor_actual_estimado"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="taller.vehiculo_action_window" model="ir.actions.act_window">
+            <field name="name">Vehículo</field>
+            <field name="res_model">taller.vehiculo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="taller.marca_action_window" model="ir.actions.act_window">
+            <field name="name">Marca</field>
+            <field name="res_model">taller.marca</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="taller.menu_root" name="Taller" groups="taller_user,taller_manager"/>
+        <menuitem id="taller.vehiculo_menu" name="Vehiculo" parent="taller.menu_root"
+                  action="taller.vehiculo_action_window" groups="taller_user,taller_manager"/>
+        <menuitem id="taller.marca_menu" name="Marca" parent="taller.menu_root"
+                  action="taller.marca_action_window" groups="taller_user,taller_manager"/>
+    </data>
+</odoo>

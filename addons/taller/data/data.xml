@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="marca_ford" model="taller.marca">
+            <field name="nombre">Ford</field>
+        </record>
+        <record id="marca_chevrolet" model="taller.marca">
+            <field name="nombre">Chevrolet</field>
+        </record>
+        <record id="marca_toyota" model="taller.marca">
+            <field name="nombre">Toyota</field>
+        </record>
+        <record id="marca_honda" model="taller.marca">
+            <field name="nombre">Honda</field>
+        </record>
+    </data>
+</odoo>
