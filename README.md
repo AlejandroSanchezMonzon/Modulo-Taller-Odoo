@@ -4,4 +4,4 @@ Creación de un módulo de Odoo que gestiona el funcionamiento de un taller util
 ## Documentació
 https://github.com/AlejandroSanchezMonzon/Modulo-Taller-Odoo/tree/main/metadata
 
-> **Note:** Autor: Alejandro Sánchez Monzón
+> **Note** Práctica realizada por Alejandro Sánchez Monzón.
